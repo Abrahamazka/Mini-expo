@@ -21,7 +21,6 @@ navItems.forEach((item, index) => {
   });
 
   item.addEventListener("click", (e) => {
-    e.preventDefault();
     activeIndex = index;
     moveHighlight(activeIndex);
   });
