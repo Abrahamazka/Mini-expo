@@ -54,3 +54,28 @@ window.addEventListener("scroll", () => {
 
   lastScrollY = currentScrollY;
 });
+
+const marquee = document.getElementById("marquee");
+
+if (marquee) {
+  let offset = 0;
+  const speed = 0.8;
+
+  function animateMarquee() {
+    const firstTrack = marquee.querySelector(".marquee-track");
+    if (!firstTrack) return;
+
+    offset -= speed;
+
+    const trackWidth = firstTrack.offsetWidth;
+
+    if (Math.abs(offset) >= trackWidth) {
+      offset = 0;
+    }
+
+    marquee.style.transform = `translateX(${offset}px)`;
+    requestAnimationFrame(animateMarquee);
+  }
+
+  animateMarquee();
+}
