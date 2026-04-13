@@ -1,11 +1,85 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mini-expo</title>
-</head>
-<body>
-    <h1>LANDING PAGE</h1>
-</body>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Cormorant+Garamond:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body class="bg-[#FAEEE2] font-['Inter'] text-[#3D3427]">
+    <div
+      id="navWrapper"
+      class="fixed top-5 left-1/2 z-50 flex -translate-x-1/2 items-center justify-center transition-transform duration-300 ease-in-out"
+    >
+      <nav class="rounded-full bg-white p-2 shadow-lg">
+        <ul id="navMenu" class="relative flex items-center">
+          <div
+            id="highlight"
+            class="absolute top-0 bottom-0 left-0 rounded-full bg-zinc-100 transition-all duration-300 ease-in-out"
+          ></div>
+
+          <li>
+            <a
+              href="#"
+              class="nav-item relative z-10 block rounded-full px-6 py-3 font-semibold text-[#3D3427]"
+            >
+              Homepage
+            </a>
+          </li>
+          <li>
+            <a
+              href="#"
+              class="nav-item relative z-10 block rounded-full px-6 py-3 font-semibold text-[#3D3427]"
+            >
+              Photobooth
+            </a>
+          </li>
+          <li>
+            <a
+              href="#"
+              class="nav-item relative z-10 block rounded-full px-5 py-3 font-semibold text-[#3D3427]"
+            >
+              ContactUs
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <main class="relative flex min-h-screen items-center justify-center px-6">
+      <section class="flex max-w-4xl flex-col items-center text-center">
+        <h1
+          class="font-['Cormorant_Garamond'] text-[100px] leading-[0.9] font-medium text-[#3D3427] md:text-[180px]"
+        >
+          Healty
+        </h1>
+
+        <h2
+          class="-mt-2 font-['Cormorant_Garamond'] text-[100px] leading-[0.9] italic font-medium text-[#F67642] md:-mt-6 md:text-[170px]"
+        >
+          food.
+        </h2>
+
+        <p class="mt-4 text-sm text-[#8E857B] md:text-xl">
+          Eat clean, Feel great.
+        </p>
+
+        <a
+          href="#"
+          class="mt-6 inline-flex items-center rounded-full bg-[#3D3427] px-6 py-3 text-sm font-medium text-white shadow-md transition hover:opacity-90"
+        >
+          Discover More
+        </a>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
 </html>
