@@ -61,7 +61,9 @@
           Halloween Photobooth
         </p>
 
-        <h1 class="mt-4 text-4xl font-bold leading-tight text-white md:text-6xl">
+        <h1
+          class="mt-4 text-4xl font-bold leading-tight text-white md:text-6xl"
+        >
           Choose your
           <span id="judul-geser" class="block">favorite border.</span>
         </h1>
@@ -95,15 +97,15 @@
         <p
           class="mx-auto mt-4 max-w-[520px] text-sm leading-7 text-white/75 md:text-base"
         >
-          Pilih border photobooth yang kamu suka.
+          Choose the photobooth border you like.
         </p>
       </section>
 
       <section class="relative mt-12 overflow-hidden py-8">
         <div
-  id="carouselTrack"
-  class="relative mx-auto h-[620px] max-w-[1400px] md:h-[820px]"
-></div>
+          id="carouselTrack"
+          class="relative mx-auto h-[620px] max-w-[1400px] md:h-[820px]"
+        ></div>
 
         <div class="mt-4 flex w-full items-center justify-center gap-3">
           <button
@@ -111,8 +113,12 @@
             class="group relative flex h-14 w-14 items-center justify-center overflow-hidden rounded-[18px] border border-white/30 bg-white/10 text-white/80 shadow-[0_8px_30px_rgba(0,0,0,0.12)] backdrop-blur-xl transition duration-300 hover:bg-white/15 hover:text-white"
             aria-label="Previous"
           >
-            <span class="pointer-events-none absolute inset-x-2 top-1 h-1/2 rounded-full bg-white/20 blur-md"></span>
-            <span class="pointer-events-none absolute inset-0 rounded-[18px] ring-1 ring-inset ring-white/10"></span>
+            <span
+              class="pointer-events-none absolute inset-x-2 top-1 h-1/2 rounded-full bg-white/20 blur-md"
+            ></span>
+            <span
+              class="pointer-events-none absolute inset-0 rounded-[18px] ring-1 ring-inset ring-white/10"
+            ></span>
 
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -133,8 +139,12 @@
             class="group relative flex h-14 w-14 items-center justify-center overflow-hidden rounded-[18px] border border-white/30 bg-white/10 text-white/80 shadow-[0_8px_30px_rgba(0,0,0,0.12)] backdrop-blur-xl transition duration-300 hover:bg-white/15 hover:text-white"
             aria-label="Next"
           >
-            <span class="pointer-events-none absolute inset-x-2 top-1 h-1/2 rounded-full bg-white/20 blur-md"></span>
-            <span class="pointer-events-none absolute inset-0 rounded-[18px] ring-1 ring-inset ring-white/10"></span>
+            <span
+              class="pointer-events-none absolute inset-x-2 top-1 h-1/2 rounded-full bg-white/20 blur-md"
+            ></span>
+            <span
+              class="pointer-events-none absolute inset-0 rounded-[18px] ring-1 ring-inset ring-white/10"
+            ></span>
 
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -156,91 +166,91 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/1.0.0/anime.min.js"></script>
     <script src="./script.js"></script>
 
-<script>
-  // navbar
-  const navItems = document.querySelectorAll(".nav-item");
-  const highlight = document.getElementById("highlight");
-  const navMenu = document.getElementById("navMenu");
-  const navWrapper = document.getElementById("navWrapper");
+    <script>
+      // navbar
+      const navItems = document.querySelectorAll(".nav-item");
+      const highlight = document.getElementById("highlight");
+      const navMenu = document.getElementById("navMenu");
+      const navWrapper = document.getElementById("navWrapper");
 
-  let activeIndex = 1;
-  let lastScrollY = window.scrollY;
+      let activeIndex = 1;
+      let lastScrollY = window.scrollY;
 
-  function moveHighlight(index) {
-    const item = navItems[index];
-    if (!item || !highlight) return;
+      function moveHighlight(index) {
+        const item = navItems[index];
+        if (!item || !highlight) return;
 
-    highlight.style.left = item.offsetLeft + "px";
-    highlight.style.width = item.offsetWidth + "px";
-    highlight.style.height = item.offsetHeight + "px";
-  }
+        highlight.style.left = item.offsetLeft + "px";
+        highlight.style.width = item.offsetWidth + "px";
+        highlight.style.height = item.offsetHeight + "px";
+      }
 
-  navItems.forEach((item, index) => {
-    item.addEventListener("mouseenter", () => {
-      moveHighlight(index);
-    });
+      navItems.forEach((item, index) => {
+        item.addEventListener("mouseenter", () => {
+          moveHighlight(index);
+        });
 
-    item.addEventListener("click", () => {
-      activeIndex = index;
-      moveHighlight(activeIndex);
-    });
-  });
+        item.addEventListener("click", () => {
+          activeIndex = index;
+          moveHighlight(activeIndex);
+        });
+      });
 
-  if (navMenu) {
-    navMenu.addEventListener("mouseleave", () => {
-      moveHighlight(activeIndex);
-    });
-  }
+      if (navMenu) {
+        navMenu.addEventListener("mouseleave", () => {
+          moveHighlight(activeIndex);
+        });
+      }
 
-  window.addEventListener("load", () => moveHighlight(activeIndex));
-  window.addEventListener("resize", () => moveHighlight(activeIndex));
+      window.addEventListener("load", () => moveHighlight(activeIndex));
+      window.addEventListener("resize", () => moveHighlight(activeIndex));
 
-  window.addEventListener("scroll", () => {
-    if (!navWrapper) return;
+      window.addEventListener("scroll", () => {
+        if (!navWrapper) return;
 
-    const currentScrollY = window.scrollY;
+        const currentScrollY = window.scrollY;
 
-    if (currentScrollY <= 10) {
-      navWrapper.classList.remove("-translate-y-32");
-      navWrapper.classList.add("translate-y-0");
-    } else if (currentScrollY > lastScrollY) {
-      navWrapper.classList.remove("translate-y-0");
-      navWrapper.classList.add("-translate-y-32");
-    } else {
-      navWrapper.classList.remove("-translate-y-32");
-      navWrapper.classList.add("translate-y-0");
-    }
+        if (currentScrollY <= 10) {
+          navWrapper.classList.remove("-translate-y-32");
+          navWrapper.classList.add("translate-y-0");
+        } else if (currentScrollY > lastScrollY) {
+          navWrapper.classList.remove("translate-y-0");
+          navWrapper.classList.add("-translate-y-32");
+        } else {
+          navWrapper.classList.remove("-translate-y-32");
+          navWrapper.classList.add("translate-y-0");
+        }
 
-    lastScrollY = currentScrollY;
-  });
+        lastScrollY = currentScrollY;
+      });
 
-  // carousel 4 border photo
-  const borders = [
-    { title: "Opsi 1", image: "./2.png" },
-    { title: "Opsi 2", image: "./3.png" },
-    { title: "Opsi 3", image: "./4.png" },
-    { title: "Opsi 4", image: "./5.png" },
-  ];
+      // carousel 4 border photo
+      const borders = [
+        { title: "Option 1", image: "./2.png" },
+        { title: "Option 2", image: "./3.png" },
+        { title: "Option 3", image: "./4.png" },
+        { title: "Option 4", image: "./5.png" },
+      ];
 
-  let activeBorder = 0;
+      let activeBorder = 0;
 
-  const carouselTrack = document.getElementById("carouselTrack");
-  const prevBtn = document.getElementById("prevBtn");
-  const nextBtn = document.getElementById("nextBtn");
+      const carouselTrack = document.getElementById("carouselTrack");
+      const prevBtn = document.getElementById("prevBtn");
+      const nextBtn = document.getElementById("nextBtn");
 
-  let cardElements = [];
+      let cardElements = [];
 
-  function buildCarousel() {
-    carouselTrack.innerHTML = "";
-    cardElements = [];
+      function buildCarousel() {
+        carouselTrack.innerHTML = "";
+        cardElements = [];
 
-    borders.forEach((border, index) => {
-      const card = document.createElement("button");
-      card.type = "button";
-      card.className =
-        "absolute left-1/2 top-1/2 overflow-hidden rounded-[30px] border border-white/20 bg-white/10 p-2 shadow-[0_20px_60px_rgba(0,0,0,0.18)] backdrop-blur-md transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)]";
+        borders.forEach((border, index) => {
+          const card = document.createElement("button");
+          card.type = "button";
+          card.className =
+            "absolute left-1/2 top-1/2 overflow-hidden rounded-[30px] border border-white/20 bg-white/10 p-2 shadow-[0_20px_60px_rgba(0,0,0,0.18)] backdrop-blur-md transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)]";
 
-      card.innerHTML = `
+          card.innerHTML = `
         <div class="relative h-full w-full overflow-hidden rounded-[24px] bg-white/90 p-2">
           <div class="absolute left-1/2 top-[4%] z-10 -translate-x-1/2">
             <span class="whitespace-nowrap rounded-full bg-black/55 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.18em] text-white md:px-4 md:py-1.5 md:text-xs">
@@ -257,88 +267,88 @@
         </div>
       `;
 
-      card.addEventListener("click", () => {
-        activeBorder = index;
+          card.addEventListener("click", () => {
+            activeBorder = index;
+            updateCarousel();
+          });
+
+          carouselTrack.appendChild(card);
+          cardElements.push(card);
+        });
+
+        updateCarousel(true);
+      }
+
+      function updateCarousel(firstRender = false) {
+        const isMobile = window.innerWidth < 768;
+
+        carouselTrack.style.height = isMobile ? "520px" : "780px";
+        carouselTrack.style.maxWidth = isMobile ? "100%" : "1400px";
+
+        cardElements.forEach((card, index) => {
+          const offset = index - activeBorder;
+          const distance = Math.abs(offset);
+
+          card.style.height = isMobile ? "420px" : "680px";
+          card.style.aspectRatio = "707 / 2000";
+
+          let translateX = offset * (isMobile ? 135 : 220);
+          let scale = 0.82;
+          let opacity = 0.18;
+          let rotate = offset * -8;
+          let zIndex = 10 - distance;
+          let blur = "blur(1px)";
+
+          if (offset === 0) {
+            translateX = 0;
+            scale = 1;
+            opacity = 1;
+            rotate = 0;
+            zIndex = 50;
+            blur = "blur(0px)";
+          } else if (distance === 1) {
+            translateX = offset * (isMobile ? 140 : 230);
+            scale = 0.88;
+            opacity = 0.4;
+            rotate = offset * -7;
+            zIndex = 30;
+            blur = "blur(0.5px)";
+          } else {
+            translateX = offset * (isMobile ? 155 : 275);
+            scale = 0.76;
+            opacity = 0.14;
+            rotate = offset * -9;
+            zIndex = 15;
+            blur = "blur(1.5px)";
+          }
+
+          card.style.zIndex = zIndex;
+          card.style.opacity = opacity;
+          card.style.filter = blur;
+
+          if (firstRender) {
+            card.style.transform = `translate(-50%, -50%) translateX(${translateX}px) scale(${scale}) rotate(${rotate}deg)`;
+          } else {
+            requestAnimationFrame(() => {
+              card.style.transform = `translate(-50%, -50%) translateX(${translateX}px) scale(${scale}) rotate(${rotate}deg)`;
+            });
+          }
+        });
+      }
+
+      prevBtn.addEventListener("click", () => {
+        activeBorder = (activeBorder - 1 + borders.length) % borders.length;
         updateCarousel();
       });
 
-      carouselTrack.appendChild(card);
-      cardElements.push(card);
-    });
+      nextBtn.addEventListener("click", () => {
+        activeBorder = (activeBorder + 1) % borders.length;
+        updateCarousel();
+      });
 
-    updateCarousel(true);
-  }
+      window.addEventListener("resize", () => updateCarousel(true));
 
-  function updateCarousel(firstRender = false) {
-    const isMobile = window.innerWidth < 768;
-
-    carouselTrack.style.height = isMobile ? "520px" : "780px";
-    carouselTrack.style.maxWidth = isMobile ? "100%" : "1400px";
-
-    cardElements.forEach((card, index) => {
-      const offset = index - activeBorder;
-      const distance = Math.abs(offset);
-
-      card.style.height = isMobile ? "420px" : "680px";
-      card.style.aspectRatio = "707 / 2000";
-
-      let translateX = offset * (isMobile ? 135 : 220);
-      let scale = 0.82;
-      let opacity = 0.18;
-      let rotate = offset * -8;
-      let zIndex = 10 - distance;
-      let blur = "blur(1px)";
-
-      if (offset === 0) {
-        translateX = 0;
-        scale = 1;
-        opacity = 1;
-        rotate = 0;
-        zIndex = 50;
-        blur = "blur(0px)";
-      } else if (distance === 1) {
-        translateX = offset * (isMobile ? 140 : 230);
-        scale = 0.88;
-        opacity = 0.4;
-        rotate = offset * -7;
-        zIndex = 30;
-        blur = "blur(0.5px)";
-      } else {
-        translateX = offset * (isMobile ? 155 : 275);
-        scale = 0.76;
-        opacity = 0.14;
-        rotate = offset * -9;
-        zIndex = 15;
-        blur = "blur(1.5px)";
-      }
-
-      card.style.zIndex = zIndex;
-      card.style.opacity = opacity;
-      card.style.filter = blur;
-
-      if (firstRender) {
-        card.style.transform = `translate(-50%, -50%) translateX(${translateX}px) scale(${scale}) rotate(${rotate}deg)`;
-      } else {
-        requestAnimationFrame(() => {
-          card.style.transform = `translate(-50%, -50%) translateX(${translateX}px) scale(${scale}) rotate(${rotate}deg)`;
-        });
-      }
-    });
-  }
-
-  prevBtn.addEventListener("click", () => {
-    activeBorder = (activeBorder - 1 + borders.length) % borders.length;
-    updateCarousel();
-  });
-
-  nextBtn.addEventListener("click", () => {
-    activeBorder = (activeBorder + 1) % borders.length;
-    updateCarousel();
-  });
-
-  window.addEventListener("resize", () => updateCarousel(true));
-
-  buildCarousel();
-</script>
+      buildCarousel();
+    </script>
   </body>
 </html>
