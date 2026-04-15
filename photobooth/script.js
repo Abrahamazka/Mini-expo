@@ -4,7 +4,6 @@ var cH;
 var cW;
 var bgColor = "#282741";
 var animations = [];
-var circles = [];
 
 var colorPicker = (function () {
   var colors = ["#7D1935", "#FFBE53", "#2D4263", "#282741"];
@@ -36,14 +35,21 @@ function calcPageFillRadius(x, y) {
   return Math.sqrt(Math.pow(l, 2) + Math.pow(h, 2));
 }
 
+function isInteractiveTarget(target) {
+  if (!target || !target.closest) return false;
+
+  return !!target.closest(
+    "#navWrapper, #carouselTrack, #prevBtn, #nextBtn, a, button, input, textarea, select, label"
+  );
+}
+
 function addClickListeners() {
-  document.addEventListener("touchstart", handleEvent, { passive: false });
+  document.addEventListener("touchstart", handleEvent, { passive: true });
   document.addEventListener("mousedown", handleEvent);
 }
 
 function getEventPosition(e) {
   var rect = c.getBoundingClientRect();
-
   var clientX;
   var clientY;
 
@@ -62,9 +68,7 @@ function getEventPosition(e) {
 }
 
 function handleEvent(e) {
-  if (e.touches) {
-    e.preventDefault();
-  }
+  if (isInteractiveTarget(e.target)) return;
 
   var pos = getEventPosition(e);
   var x = pos.x;
@@ -239,7 +243,10 @@ function handleInactiveUser() {
 
 function startFauxClicking() {
   setTimeout(function () {
-    fauxClick(anime.random(cW * 0.2, cW * 0.8), anime.random(cH * 0.2, cH * 0.8));
+    fauxClick(
+      anime.random(cW * 0.2, cW * 0.8),
+      anime.random(cH * 0.2, cH * 0.8)
+    );
     startFauxClicking();
   }, anime.random(200, 900));
 }
