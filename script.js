@@ -78,3 +78,25 @@ if (marquee) {
 
   animateMarquee();
 }
+
+// --- Carousel Navigation Logic ---
+const carouselTrack = document.getElementById("carouselTrack");
+const prevBtn = document.getElementById("prevBtn");
+const nextBtn = document.getElementById("nextBtn");
+
+if (carouselTrack && prevBtn && nextBtn) {
+  // Function to calculate how far to scroll (1 card width + gap)
+  const getScrollAmount = () => {
+    const card = carouselTrack.querySelector('.carousel-card');
+    // Card width + the 24px gap between cards
+    return card.offsetWidth + 24; 
+  };
+
+  nextBtn.addEventListener("click", () => {
+    carouselTrack.scrollBy({ left: getScrollAmount(), behavior: "smooth" });
+  });
+
+  prevBtn.addEventListener("click", () => {
+    carouselTrack.scrollBy({ left: -getScrollAmount(), behavior: "smooth" });
+  });
+}

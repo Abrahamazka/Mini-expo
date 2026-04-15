@@ -1,5 +1,8 @@
 <!doctype html>
-<html lang="en">
+<html
+  lang="en"
+  class="scroll-smooth [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden"
+>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -13,7 +16,9 @@
     />
   </head>
 
-  <body class="bg-[#FAEEE2] font-['Inter'] text-[#3D3427]">
+  <body
+    class="bg-[#FAEEE2] font-['Inter'] text-[#3D3427] [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden"
+  >
     <div
       id="navWrapper"
       class="fixed top-5 left-1/2 z-50 flex -translate-x-1/2 items-center justify-center transition-transform duration-300 ease-in-out"
@@ -27,7 +32,7 @@
 
           <li>
             <a
-              href="index.html"
+              href="#landing"
               class="nav-item relative z-10 block rounded-full px-6 py-3 font-semibold text-[#3D3427]"
             >
               Homepage
@@ -46,19 +51,22 @@
               href="contact.html"
               class="nav-item relative z-10 block rounded-full px-5 py-3 font-semibold text-[#3D3427]"
             >
-              ContactUs
+              Contact Us
             </a>
           </li>
         </ul>
       </nav>
     </div>
 
-    <main class="relative flex min-h-screen items-center justify-center px-6">
+    <main
+      id="landing"
+      class="relative flex min-h-screen items-center justify-center px-6"
+    >
       <section class="flex max-w-4xl flex-col items-center text-center">
         <h1
           class="font-['Cormorant_Garamond'] text-[100px] leading-[0.9] font-medium text-[#321c04] md:text-[180px]"
         >
-          Healty
+          Healthy
         </h1>
 
         <h2
@@ -72,13 +80,260 @@
         </p>
 
         <a
-          href="#"
+          href="#about"
           class="mt-6 inline-flex items-center rounded-full bg-[#321c04] px-6 py-3 text-sm font-medium text-white shadow-md transition hover:opacity-90"
         >
           Discover More
         </a>
       </section>
     </main>
+
+    <section
+      id="about"
+      class="mx-auto max-w-[1400px] px-4 py-24 md:px-8 lg:px-10"
+    >
+      <div class="mb-12 lg:mb-16">
+        <span
+          class="mb-4 block text-[12px] font-semibold uppercase tracking-[0.2em] text-[#F67642]"
+        >
+          About Mini-Expo
+        </span>
+        <h2
+          class="font-['Cormorant_Garamond'] text-[42px] font-medium leading-[1.05] text-[#321c04] md:text-[56px]"
+        >
+          Redefining how you <br class="hidden lg:block" />
+          experience <span class="italic text-[#F67642]">wellness.</span>
+        </h2>
+      </div>
+
+      <div
+        class="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-20 lg:items-center"
+      >
+        <div
+          class="aspect-[4/3] w-full rounded-[28px] border border-[#321c04]/5 bg-white p-2 shadow-[0_8px_30px_rgba(50,28,4,0.04)]"
+        >
+          <div
+            class="flex h-full w-full items-center justify-center rounded-[20px] bg-[#FAEEE2] overflow-hidden"
+          >
+            <span
+              class="font-['Cormorant_Garamond'] text-xl italic text-[#321c04]/40"
+              >Visual Placeholder</span
+            >
+          </div>
+        </div>
+
+        <div
+          class="flex flex-col justify-center space-y-6 text-[16px] font-light leading-relaxed text-[#8E857B]"
+        >
+          <p>
+            [Placeholder] Mini-expo is designed to bridge the gap between your
+            daily habits and your long-term health goals. We believe that
+            understanding your body shouldn't require a medical degree, but
+            rather a simple, intuitive interface that speaks your language.
+          </p>
+          <p>
+            [Placeholder] Whether you're tracking your morning nutrition,
+            monitoring your afternoon activity spikes, or analyzing your deep
+            sleep cycles, our platform connects the dots. This space will
+            eventually hold the detailed description your friend provides.
+          </p>
+
+          <div
+            class="mt-4 grid grid-cols-2 gap-6 border-t border-[#321c04]/10 pt-8"
+          >
+            <div>
+              <p
+                class="font-['Cormorant_Garamond'] text-[36px] font-medium leading-none text-[#321c04]"
+              >
+                100%
+              </p>
+              <p
+                class="mt-2 text-[12px] font-medium uppercase tracking-wider text-[#321c04]/60"
+              >
+                Placeholder Stat
+              </p>
+            </div>
+            <div>
+              <p
+                class="font-['Cormorant_Garamond'] text-[36px] font-medium leading-none text-[#321c04]"
+              >
+                24/7
+              </p>
+              <p
+                class="mt-2 text-[12px] font-medium uppercase tracking-wider text-[#321c04]/60"
+              >
+                Always Active
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section
+      id="discover"
+      class="mx-auto max-w-[1400px] px-4 py-24 md:px-8 lg:px-10"
+    >
+      <div
+        class="mb-12 flex flex-col items-start justify-between gap-6 md:flex-row md:items-end"
+      >
+        <h2
+          class="max-w-2xl font-['Cormorant_Garamond'] text-[42px] font-medium leading-[1.05] text-[#321c04] md:text-[56px]"
+        >
+          Discover the full picture <br />
+          of your health.
+        </h2>
+      </div>
+
+      <div class="relative w-full">
+        <div
+          id="carouselTrack"
+          class="[scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden flex w-full snap-x snap-mandatory gap-6 overflow-x-auto scroll-smooth pb-8"
+        >
+          <div
+            class="carousel-card flex-shrink-0 snap-start w-[85%] md:w-[60%] lg:w-[35%] rounded-[28px] bg-white p-8 shadow-[0_8px_30px_rgba(50,28,4,0.04)] border border-[#321c04]/5"
+          >
+            <div
+              class="mb-8 inline-flex rounded-full border border-[#321c04]/10 px-4 py-1.5 text-[12px] font-medium uppercase tracking-wider text-[#321c04]"
+            >
+              Logging
+            </div>
+            <div
+              class="mb-8 aspect-[4/3] w-full rounded-[16px] bg-[#FAEEE2] flex items-center justify-center overflow-hidden"
+            >
+              <span
+                class="text-[#321c04]/40 italic font-['Cormorant_Garamond'] text-xl"
+                >Food Image Here</span
+              >
+            </div>
+            <h3 class="mb-3 font-semibold text-[#321c04] text-[20px]">
+              Food is your charging cable
+            </h3>
+            <p class="text-[15px] leading-relaxed text-[#8E857B]">
+              Track energy output from activities and workouts, understand your
+              habits at a glance.
+            </p>
+          </div>
+
+          <div
+            class="carousel-card flex-shrink-0 snap-start w-[85%] md:w-[60%] lg:w-[35%] rounded-[28px] bg-white p-8 shadow-[0_8px_30px_rgba(50,28,4,0.04)] border border-[#321c04]/5"
+          >
+            <div
+              class="mb-8 inline-flex rounded-full border border-[#321c04]/10 px-4 py-1.5 text-[12px] font-medium uppercase tracking-wider text-[#321c04]"
+            >
+              Activity
+            </div>
+            <div
+              class="mb-8 aspect-[4/3] w-full rounded-[16px] bg-[#FAEEE2] flex items-center justify-center overflow-hidden"
+            >
+              <span
+                class="text-[#321c04]/40 italic font-['Cormorant_Garamond'] text-xl"
+                >Activity Image Here</span
+              >
+            </div>
+            <h3 class="mb-3 font-semibold text-[#321c04] text-[20px]">
+              Break in new goals
+            </h3>
+            <p class="text-[15px] leading-relaxed text-[#8E857B]">
+              Monitor energy intake from food and compare levels over time to
+              reach your peak performance.
+            </p>
+          </div>
+
+          <div
+            class="carousel-card flex-shrink-0 snap-start w-[85%] md:w-[60%] lg:w-[35%] rounded-[28px] bg-white p-8 shadow-[0_8px_30px_rgba(50,28,4,0.04)] border border-[#321c04]/5"
+          >
+            <div
+              class="mb-8 inline-flex rounded-full border border-[#321c04]/10 px-4 py-1.5 text-[12px] font-medium uppercase tracking-wider text-[#321c04]"
+            >
+              Sleep
+            </div>
+            <div
+              class="mb-8 aspect-[4/3] w-full rounded-[16px] bg-[#FAEEE2] flex items-center justify-center overflow-hidden"
+            >
+              <span
+                class="text-[#321c04]/40 italic font-['Cormorant_Garamond'] text-xl"
+                >Sleep Image Here</span
+              >
+            </div>
+            <h3 class="mb-3 font-semibold text-[#321c04] text-[20px]">
+              Manage your nights
+            </h3>
+            <p class="text-[15px] leading-relaxed text-[#8E857B]">
+              Detailed charts and sleep cycle analysis to ensure you wake up
+              refreshed and energized for tomorrow.
+            </p>
+          </div>
+
+          <div
+            class="carousel-card flex-shrink-0 snap-start w-[85%] md:w-[60%] lg:w-[35%] rounded-[28px] bg-white p-8 shadow-[0_8px_30px_rgba(50,28,4,0.04)] border border-[#321c04]/5"
+          >
+            <div
+              class="mb-8 inline-flex rounded-full border border-[#321c04]/10 px-4 py-1.5 text-[12px] font-medium uppercase tracking-wider text-[#321c04]"
+            >
+              Mboh
+            </div>
+            <div
+              class="mb-8 aspect-[4/3] w-full rounded-[16px] bg-[#FAEEE2] flex items-center justify-center overflow-hidden"
+            >
+              <span
+                class="text-[#321c04]/40 italic font-['Cormorant_Garamond'] text-xl"
+                >Mboh Image Here</span
+              >
+            </div>
+            <h3 class="mb-3 font-semibold text-[#321c04] text-[20px]">
+              Auuwasss
+            </h3>
+            <p class="text-[15px] leading-relaxed text-[#8E857B]">
+              Deskripsi anjay disini
+            </p>
+          </div>
+        </div>
+
+        <div class="mt-6 flex items-center justify-center gap-4">
+          <button
+            id="prevBtn"
+            class="flex h-12 w-12 items-center justify-center rounded-full border border-[#321c04]/20 text-[#321c04] transition hover:bg-[#321c04] hover:border-[#321c04] hover:text-white"
+            aria-label="Previous"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="h-5 w-5"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M15.75 19.5L8.25 12l7.5-7.5"
+              />
+            </svg>
+          </button>
+          <button
+            id="nextBtn"
+            class="flex h-12 w-12 items-center justify-center rounded-full border border-[#321c04]/20 text-[#321c04] transition hover:bg-[#321c04] hover:border-[#321c04] hover:text-white"
+            aria-label="Next"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="h-5 w-5"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M8.25 4.5l7.5 7.5-7.5 7.5"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </section>
 
     <footer class="mt-0 bg-[#321c04] text-white font-light">
       <div class="overflow-hidden border-y border-white/20">
@@ -153,7 +408,7 @@
           </p>
 
           <a
-            href="#"
+            href="contact.html"
             class="mt-8 inline-flex items-center rounded-full bg-white px-7 py-3 font-['Cormorant_Garamond'] text-[18px] italic text-[#321c04] shadow-[0_4px_0_0_rgba(255,255,255,0.15)] transition hover:translate-y-[1px] hover:shadow-[0_3px_0_0_rgba(255,255,255,0.12)]"
           >
             Contact us
@@ -227,7 +482,6 @@
                   d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2.2A2.8 2.8 0 0 0 4.2 7v10A2.8 2.8 0 0 0 7 19.8h10a2.8 2.8 0 0 0 2.8-2.8V7A2.8 2.8 0 0 0 17 4.2H7zm10.25 1.65a1.1 1.1 0 1 1 0 2.2 1.1 1.1 0 0 1 0-2.2zM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 2.2A2.8 2.8 0 1 0 12 14.8 2.8 2.8 0 0 0 12 9.2z"
                 />
               </svg>
-              
             </a>
           </div>
         </div>
